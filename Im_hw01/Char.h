@@ -19,4 +19,6 @@ void getS(float, float, float, float, float, float, float, float);//left x,y, to
 void getU(float, float, float, float, float, float, float);		//top x,y, and mid y, button x,y, offset x,y
 void getv(float, float, float, float, float, float);			//top x,y, button x,y, offset x,y
 void gete(float, float, float, float, float, float);			//left x,y, and top x,y, offset x,y
+void getr(float, float, float, float, float, float, float);		//left x,y, and mid y, button y ,top x,y, offset x
+void gety(float, float, float, float, float, float);			//top x,y, button x,y, offset x,y
 //==============================================================================

@@ -3,7 +3,6 @@
 //==============================================================================
 void getN(float x,float y,float x1,float y1,float offset){
 	line(x, y, y1,offset);
-
 	glBegin(GL_TRIANGLES);
 		glVertex3f(x, y, 0.0f);
 		glVertex3f(x1, y1, 0.0f);
@@ -136,13 +135,13 @@ void topa(float x1, float y1, float x2, float y2, float offset){
 		glVertex3f(x2 + x2 - x1, y1, 0.0f);
 		glVertex3f(x2, y2, 0.0f);
 		glVertex3f(x2 + x2 - x1 - offset, y1, 0.0f);
-glVertex3f(x2, y2 + offset, 0.0f);
-glVertex3f(x2, y2, 0.0f);
-glVertex3f(x2 + x2 - x1 + offset, y1, 0.0f);
-glVertex3f(x2 + x2 - x1 + offset, y1, 0.0f);
-glVertex3f((x2 + (x1 + x2) / 2.0f + offset) / 2.0f - offset, (y1 + y2) / 2.0f + 0.2f* offset, 0.0f);
-glVertex3f(x2, y2 + offset, 0.0f);
-glEnd();
+		glVertex3f(x2, y2 + offset, 0.0f);
+		glVertex3f(x2, y2, 0.0f);
+		glVertex3f(x2 + x2 - x1 + offset, y1, 0.0f);
+		glVertex3f(x2 + x2 - x1 + offset, y1, 0.0f);
+		glVertex3f((x2 + (x1 + x2) / 2.0f + offset) / 2.0f - offset, (y1 + y2) / 2.0f + 0.2f* offset, 0.0f);
+		glVertex3f(x2, y2 + offset, 0.0f);
+	glEnd();
 }
 //==============================================================================
 void getnh(float x1, float y1, float y2, float y3, float x2, float yy, float offset){
@@ -170,19 +169,19 @@ void getu(float x1, float y1, float y2, float x2, float yy, float offset, float 
 //==============================================================================
 void buttonU(float x1, float y2, float x2, float yy, float offset, float offset2){
 	glBegin(GL_TRIANGLES);
-	glVertex3f(x1, y2, 0.0f);
-	glVertex3f(x2, yy + offset2, 0.0f);
-	glVertex3f(x1 + offset, y2, 0.0f);
-	glVertex3f(x2, yy, 0.0f);
-	glVertex3f(x2, yy + offset2, 0.0f);
-	glVertex3f(x1, y2, 0.0f);
+		glVertex3f(x1, y2, 0.0f);
+		glVertex3f(x2, yy + offset2, 0.0f);
+		glVertex3f(x1 + offset, y2, 0.0f);
+		glVertex3f(x2, yy, 0.0f);
+		glVertex3f(x2, yy + offset2, 0.0f);
+		glVertex3f(x1, y2, 0.0f);
 
-	glVertex3f(x2 + x2 - x1, y2, 0.0f);
-	glVertex3f(x2, yy + offset2, 0.0f);
-	glVertex3f(x2 + x2 - x1, y2, 0.0f);
-	glVertex3f(x2 + x2 - x1 + offset, y2, 0.0f);
-	glVertex3f(x2, yy + offset2, 0.0f);
-	glVertex3f(x2, yy, 0.0f);
+		glVertex3f(x2 + x2 - x1, y2, 0.0f);
+		glVertex3f(x2, yy + offset2, 0.0f);
+		glVertex3f(x2 + x2 - x1, y2, 0.0f);
+		glVertex3f(x2 + x2 - x1 + offset, y2, 0.0f);
+		glVertex3f(x2, yy + offset2, 0.0f);
+		glVertex3f(x2, yy, 0.0f);
 	glEnd();
 }
 //==============================================================================
@@ -201,13 +200,13 @@ void getH(float x1, float y1, float y2, float y3, float x2, float offset, float 
 void getS(float x1, float y1, float x2, float y2, float y3, float y4, float offset, float offset2){
 	topa(x1, y1, x2, y2, offset);
 	glBegin(GL_TRIANGLES);
-	glVertex3f(x1, y1, 0.0f);
-	glVertex3f(x2 + x2 - x1, y3, 0.0f);
-	glVertex3f(x1 + offset, y1, 0.0f);
+		glVertex3f(x1, y1, 0.0f);
+		glVertex3f(x2 + x2 - x1, y3, 0.0f);
+		glVertex3f(x1 + offset, y1, 0.0f);
 
-	glVertex3f(x2 + x2 - x1, y3, 0.0f);
-	glVertex3f(x2 + x2 - x1 + offset, y3, 0.0f);
-	glVertex3f(x1 + offset, y1, 0.0f);
+		glVertex3f(x2 + x2 - x1, y3, 0.0f);
+		glVertex3f(x2 + x2 - x1 + offset, y3, 0.0f);
+		glVertex3f(x1 + offset, y1, 0.0f);
 	glEnd();
 	buttonU(x1, y3, x2, y4, offset, offset2);
 }
@@ -220,26 +219,54 @@ void getU(float x1, float y1, float y2, float x3, float y3, float offset, float 
 //==============================================================================
 void getv(float x1, float y1, float x2, float y2, float offset, float offset2){
 	glBegin(GL_TRIANGLES);
-	glVertex3f(x1, y1, 0.0f);
-	glVertex3f(x2, y2, 0.0f);
-	glVertex3f(x1 + offset, y1, 0.0f);
-	glVertex3f(x1 + offset, y1, 0.0f);
-	glVertex3f(x2, y2, 0.0f);
-	glVertex3f(x2, y2 + offset2, 0.0f);
+		glVertex3f(x1, y1, 0.0f);
+		glVertex3f(x2, y2, 0.0f);
+		glVertex3f(x1 + offset, y1, 0.0f);
+		glVertex3f(x1 + offset, y1, 0.0f);
+		glVertex3f(x2, y2, 0.0f);
+		glVertex3f(x2, y2 + offset2, 0.0f);
 
-	glVertex3f(x2 + (x2 - x1) - offset, y1, 0.0f);
-	glVertex3f(x2 + (x2 - x1), y1, 0.0f);
-	glVertex3f(x2, y2 + offset2, 0.0f);
-	glVertex3f(x2, y2, 0.0f);
-	glVertex3f(x2 + (x2 - x1), y1, 0.0f);
-	glVertex3f(x2, y2 + offset2, 0.0f);
+		glVertex3f(x2 + (x2 - x1), y1, 0.0f);
+		glVertex3f(x2 + (x2 - x1) - offset, y1, 0.0f);
+		glVertex3f(x2, y2 + offset2, 0.0f);
+		glVertex3f(x2, y2, 0.0f);
+		glVertex3f(x2 + (x2 - x1), y1, 0.0f);
+		glVertex3f(x2, y2 + offset2, 0.0f);
 	glEnd();
 }
 //==============================================================================
 void gete(float x1, float y1, float x2, float y2, float offset, float offset2){
-	geto(x1, y1, x2, y2, offset*0.5f, offset2*0.5f);
+	geto(x1, y1, x2, y2, offset*0.9f, offset2*0.9f);
 	glColor3f(0.0f, 0.0f, 0.0f);
 	line(x2, y1 + offset2*0.3f, y1 - offset2*1.5f, x2 + x2 - x1);
 	glColor3f(1.0f, 1.0f, 1.0f);
-	line(x1, y1 + offset2*0.3f, y1, (x2 - x1)*2.0f);
+	line(x1, y1 + offset2*0.3f, y1-offset2*0.2f, (x2 - x1)*2.0f);
 }
+//==============================================================================
+void getr(float x1, float y1, float y2, float y3, float x2, float yy, float offset){
+	line(x1, y1, y3, offset);
+	glBegin(GL_TRIANGLES);
+		glVertex3f(x1, y2, 0.0f);
+		glVertex3f(x1 + offset, y2, 0.0f);
+		glVertex3f(x2, yy, 0.0f);
+		glVertex3f(x2, yy, 0.0f);
+		glVertex3f(x2, yy + offset, 0.0f);
+		glVertex3f(x1, y2, 0.0f);
+		glVertex3f(x2, yy, 0.0f);
+		glVertex3f(offset + (x1 + x2) / 2.0f, (y2 + yy) / 2.0f + 0.2f* offset, 0.0f);
+		glVertex3f(x1, y2, 0.0f);
+	glEnd();
+}
+//==============================================================================
+void gety(float x1, float y1, float x2, float y2, float offset, float offset2){
+	getv(x1, y1, x2, y2, offset, offset2);
+	glBegin(GL_TRIANGLES);
+		glVertex3f(x2-(x2-x1)*0.5f-offset*0.8f,y2+(y2-y1)*0.5f,0.0);
+		glVertex3f(x2, y2, 0.0f);
+		glVertex3f(x2 + (x2 - x1) - offset, y1, 0.0f);
+		glVertex3f(x2 - (x2 - x1)*0.5f - offset*0.8f, y2 + (y2 - y1)*0.5f, 0.0);
+		glVertex3f(x2 - (x2 - x1)*0.5f, y2 + (y2 - y1)*0.5f, 0.0);
+		glVertex3f(x2, y2, 0.0f);
+	glEnd();
+}
+//==============================================================================
