@@ -98,23 +98,53 @@ void geto(float x1, float y1, float x2, float y2, float offset, float offset2){
 }
 //==============================================================================
 void cycle(float x1, float y1, float x2, float y2){
-	glBegin(GL_TRIANGLE_FAN);
-		glVertex3f(x2,y1,0.0f);//mid
+	glBegin(GL_TRIANGLES);
+		glVertex3f(x2, y1, 0.0f);//mid
 		glVertex3f(x2, y2, 0.0f);//up
 		glVertex3f(x1 + (x2 - x1)*0.5f, y2 - (y2 - y1)*0.134f, 0.0f);
-		glVertex3f(x1+(x2-x1)*0.3f, y1+(y2-y1)*0.7f, 0.0f);
+		glVertex3f(x2, y1, 0.0f);//mid
+		glVertex3f(x1 + (x2 - x1)*0.5f, y2 - (y2 - y1)*0.134f, 0.0f);
+		glVertex3f(x1 + (x2 - x1)*0.3f, y1 + (y2 - y1)*0.7f, 0.0f);
+		glVertex3f(x2, y1, 0.0f);//mid
+		glVertex3f(x1 + (x2 - x1)*0.3f, y1 + (y2 - y1)*0.7f, 0.0f);
+		glVertex3f(x1 + (x2 - x1)*0.134f, y1 + (y2 - y1)*0.5f, 0.0f);
+		glVertex3f(x2, y1, 0.0f);//mid
 		glVertex3f(x1 + (x2 - x1)*0.134f, y1 + (y2 - y1)*0.5f, 0.0f);
 		glVertex3f(x1, y1, 0.0f);//left
+		glVertex3f(x2, y1, 0.0f);//mid
+		glVertex3f(x1, y1, 0.0f);//left
+		glVertex3f(x1 + (x2 - x1)*0.134f, y1 - (y2 - y1)*0.5f, 0.0f);		
+		glVertex3f(x2, y1, 0.0f);//mid
 		glVertex3f(x1 + (x2 - x1)*0.134f, y1 - (y2 - y1)*0.5f, 0.0f);
 		glVertex3f(x1 + (x2 - x1)*0.3f, y1 - (y2 - y1)*0.7f, 0.0f);
+		glVertex3f(x2, y1, 0.0f);//mid
+		glVertex3f(x1 + (x2 - x1)*0.3f, y1 - (y2 - y1)*0.7f, 0.0f);
 		glVertex3f(x1 + (x2 - x1)*0.5f, y1 - (y2 - y1)*0.866f, 0.0f);
-		glVertex3f(x2,y1+ y1-y2, 0.0f);//down
+		glVertex3f(x2, y1, 0.0f);//mid
+		glVertex3f(x1 + (x2 - x1)*0.5f, y1 - (y2 - y1)*0.866f, 0.0f);
+		glVertex3f(x2, y1 + y1 - y2, 0.0f);//down		
+		glVertex3f(x2, y1, 0.0f);//mid
+		glVertex3f(x2, y1 + y1 - y2, 0.0f);//down
+		glVertex3f(x2 + (x2 - x1)*0.5f, y1 - (y2 - y1)*0.866f, 0.0f);
+		glVertex3f(x2, y1, 0.0f);//mid
 		glVertex3f(x2 + (x2 - x1)*0.5f, y1 - (y2 - y1)*0.866f, 0.0f);
 		glVertex3f(x2 + (x2 - x1)*0.7f, y1 - (y2 - y1)*0.7f, 0.0f);
+		glVertex3f(x2, y1, 0.0f);//mid
+		glVertex3f(x2 + (x2 - x1)*0.7f, y1 - (y2 - y1)*0.7f, 0.0f);
+		glVertex3f(x2 + (x2 - x1)*0.866f, y1 - (y2 - y1)*0.5f, 0.0f);		
+		glVertex3f(x2, y1, 0.0f);//mid
 		glVertex3f(x2 + (x2 - x1)*0.866f, y1 - (y2 - y1)*0.5f, 0.0f);
-		glVertex3f(x2+x2-x1, y1 , 0.0f);//right
+		glVertex3f(x2 + x2 - x1, y1, 0.0f);//right		
+		glVertex3f(x2, y1, 0.0f);//mid
+		glVertex3f(x2 + x2 - x1, y1, 0.0f);//right
+		glVertex3f(x2 + (x2 - x1)*0.866f, y1 + (y2 - y1)*0.5f, 0.0f);		
+		glVertex3f(x2, y1, 0.0f);//mid
 		glVertex3f(x2 + (x2 - x1)*0.866f, y1 + (y2 - y1)*0.5f, 0.0f);
 		glVertex3f(x2 + (x2 - x1)*0.7f, y1 + (y2 - y1)*0.7f, 0.0f);
+		glVertex3f(x2, y1, 0.0f);//mid
+		glVertex3f(x2 + (x2 - x1)*0.7f, y1 + (y2 - y1)*0.7f, 0.0f);
+		glVertex3f(x2 + (x2 - x1)*0.5f, y2 - (y2 - y1)*0.134f, 0.0f);
+		glVertex3f(x2, y1, 0.0f);//mid
 		glVertex3f(x2 + (x2 - x1)*0.5f, y2 - (y2 - y1)*0.134f, 0.0f);
 		glVertex3f(x2, y2, 0.0f);
 	glEnd();

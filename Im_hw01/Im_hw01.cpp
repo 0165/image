@@ -37,6 +37,7 @@ void display(void)
 	get5j(0.2572f,1-0.0737f,0.3533f,1-0.5819f);
 	getvu(0.3557f,1-0.0655f,0.4975f,1-0.4426f);
 	get28(0.53121f,1-0.0819f,0.6225f,1-0.3852f);
+	getvm(0.637f, 1 - 0.0573f, 0.7451f, 1 - 0.5655f);
 
 	getEnglish();
 	glutSwapBuffers();
