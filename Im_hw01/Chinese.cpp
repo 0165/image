@@ -9,7 +9,7 @@ void geteji(float x1, float y1, float x2, float y2){
 		glVertex3f(x2, y2, 0.0f);
 		glVertex3f(x2, y1, 0.0f);
 	glEnd();
-	glColor3f(0.0f, 0.0f, 0.0f);
+	glColor3f(1.0f,1.0f, 1.0f);
 	glBegin(GL_TRIANGLES); 
 		glVertex3f(x1, y1, 0.0f);
 		glVertex3f(x1, y1-(y1-y2)*0.1538f, 0.0f);
@@ -78,7 +78,7 @@ void geteji(float x1, float y1, float x2, float y2){
 		glVertex3f(x1 + (x2 - x1)*0.475f, y1 - (y1 - y2)*0.2307f, 0.0f);
 		glVertex3f(x1 + (x2 - x1)*0.475f, y1 - (y1 - y2)*0.1538f, 0.0f);
 	glEnd();
-	glColor3f(1.0f, 1.0f, 1.0f);
+	glColor3f(0.6f,0.196f, 0.8f);
 }
 //==============================================================================
 void getxu(float x1, float y1, float x2, float y2){
@@ -312,7 +312,7 @@ void getvu(float x1, float y1, float x2, float y2){
 		glVertex3f(x1 + (x2 - x1)*0.983f, y1 - (y1 - y2)*0.9318f, 0.0f);
 		glVertex3f(x1 + (x2 - x1)*0.983f, y1 - (y1 - y2)*0.909f, 0.0f);
 	glEnd();
-	glColor3f(0.0f, 0.0f, 0.0f);
+	glColor3f(1.0f,1.0f, 1.0f);
 	glBegin(GL_POLYGON);
 		glVertex3f(x1 + (x2 - x1)*0.5593f, y1 - (y1 - y2)*0.1136f, 0.0f);
 		glVertex3f(x1 + (x2 - x1)*0.5593f, y1 - (y1 - y2)*0.2045f, 0.0f);
@@ -333,7 +333,7 @@ void getvu(float x1, float y1, float x2, float y2){
 		glVertex3f(x1 + (x2 - x1)*0.5423f, y1 - (y1 - y2)*0.3409f, 0.0f);
 		glVertex3f(x1 + (x2 - x1)*0.5593f, y1 - (y1 - y2)*0.3409f, 0.0f);
 	glEnd();
-	glColor3f(1.0f, 1.0f, 1.0f);
+	glColor3f(0.6f,0.196f, 0.8f);
 }
 //==============================================================================
 void get28(float x1, float y1, float x2, float y2){
@@ -416,7 +416,7 @@ void getvm(float x1, float y1, float x2, float y2){
 		glVertex3f(x1 + (x2 - x1)*0.7777f, y1 - (y1 - y2)*0.2903f, 0.0f);
 		glVertex3f(x1 + (x2 - x1)*0.6222f, y1 - (y1 - y2)*0.3064f, 0.0f);
 	glEnd();
-	glColor3f(0.0f, 0.0f, 0.0f);
+	glColor3f(1.0f,1.0f, 1.0f);
 	glBegin(GL_POLYGON);
 		glVertex3f(x1 + (x2 - x1)*0.3555f, y1 - (y1 - y2)*0.4193f, 0.0f);	
 		glVertex3f(x1 + (x2 - x1)*0.6888f, y1 - (y1 - y2)*0.3387f, 0.0f);
@@ -424,7 +424,7 @@ void getvm(float x1, float y1, float x2, float y2){
 		glVertex3f(x1 + (x2 - x1)*0.8222f, y1 - (y1 - y2)*0.3387f, 0.0f);
 		glVertex3f(x1 + (x2 - x1)*0.7777f, y1 - (y1 - y2)*0.4032f, 0.0f);
 	glEnd();
-	glColor3f(1.0f, 1.0f, 1.0f);
+	glColor3f(0.6f,0.196f, 0.8f);
 	glBegin(GL_POLYGON);
 		glVertex3f(x1 + (x2 - x1)*0.3333f, y1 , 0.0f);
 		glVertex3f(x1 + (x2 - x1)*0.2222f, y1 - (y1 - y2)*0.0967f, 0.0f);
@@ -458,13 +458,13 @@ void getvm(float x1, float y1, float x2, float y2){
 		glVertex3f(x1 + (x2 - x1)*0.5777f, y1 - (y1 - y2)*0.0483f, 0.0f);
 		glVertex3f(x1 + (x2 - x1)*0.5555f, y1 - (y1 - y2)*0.0161f, 0.0f);
 	glEnd();
-	glColor3f(0.0f, 0.0f, 0.0f);
+	glColor3f(1.0f,1.0f, 1.0f);
 	glBegin(GL_TRIANGLES);
 		glVertex3f(x1 + (x2 - x1)*0.5333f, y1 - (y1 - y2)*0.0161f, 0.0f);
 		glVertex3f(x1 + (x2 - x1)*0.3777f, y1 - (y1 - y2)*0.1129f, 0.0f);
 		glVertex3f(x1 + (x2 - x1)*0.4666f, y1 - (y1 - y2)*0.0967f, 0.0f);
 	glEnd();
-	glColor3f(1.0f, 1.0f, 1.0f);
+	glColor3f(0.6f,0.196f, 0.8f);
 	glBegin(GL_POLYGON);
 		glVertex3f(x1 + (x2 - x1)*0.5555f, y1 - (y1 - y2)*0.4032f, 0.0f);
 		glVertex3f(x1 + (x2 - x1)*0.4444f, y1 - (y1 - y2)*0.4677f, 0.0f);
@@ -485,13 +485,13 @@ void getvm(float x1, float y1, float x2, float y2){
 		glVertex3f(x1 + (x2 - x1)*0.6444f, y1 - (y1 - y2)*0.5322f, 0.0f);
 		glVertex3f(x1 + (x2 - x1)*0.6f, y1 - (y1 - y2)*0.4838f, 0.0f);
 	glEnd();
-	glColor3f(0.0f, 0.0f, 0.0f);
+	glColor3f(1.0f,1.0f, 1.0f);
 	glBegin(GL_TRIANGLES);
 		glVertex3f(x1 + (x2 - x1)*0.5555f, y1 - (y1 - y2)*0.5f, 0.0f);
 		glVertex3f(x1 + (x2 - x1)*0.3111f, y1 - (y1 - y2)*0.5806f, 0.0f);
 		glVertex3f(x1 + (x2 - x1)*0.5111f, y1 - (y1 - y2)*0.5483f, 0.0f);
 	glEnd();
-	glColor3f(1.0f, 1.0f, 1.0f);
+	glColor3f(0.6f,0.196f, 0.8f);
 	glBegin(GL_POLYGON);
 		glVertex3f(x1 + (x2 - x1)*0.5555f, y1 - (y1 - y2)*0.5645f, 0.0f);
 		glVertex3f(x1 + (x2 - x1)*0.5555f, y1 - (y1 - y2)*0.7741f, 0.0f);
@@ -503,7 +503,7 @@ void getvm(float x1, float y1, float x2, float y2){
 		glVertex3f(x1 + (x2 - x1)*0.6444f, y1 - (y1 - y2)*0.7741f, 0.0f);
 		glVertex3f(x1 + (x2 - x1)*0.6222f, y1 - (y1 - y2)*0.5645f, 0.0f);
 	glEnd();
-	glColor3f(0.0f, 0.0f, 0.0f);
+	glColor3f(1.0f,1.0f, 1.0f);
 	glBegin(GL_POLYGON);
 		glVertex3f(x1 + (x2 - x1)*0.5555f, y1 - (y1 - y2)*0.5645f, 0.0f);
 		glVertex3f(x1 + (x2 - x1)*0.0222f, y1 - (y1 - y2)*0.9516f, 0.0f);
@@ -532,6 +532,6 @@ void getvm(float x1, float y1, float x2, float y2){
 		glVertex3f(x1 + (x2 - x1)*0.5555f, y1 - (y1 - y2)*0.3064f, 0.0f);
 		glVertex3f(x1 + (x2 - x1)*0.6222f, y1 - (y1 - y2)*0.3064f, 0.0f);
 	glEnd();
-	glColor3f(1.0f, 1.0f, 1.0f);
+	glColor3f(0.6f,0.196f, 0.8f);
 }
 //==============================================================================

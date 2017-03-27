@@ -1,6 +1,6 @@
-// Im_hw01.cpp : 定義主控台應用程式的進入點。
-//
-
+/***************************
+4103056005 林佑儒 第1次作業 3/27
+***************************/
 #include "stdafx.h"
 #include "Char.h"
 #include "Chinese.h"
@@ -14,7 +14,7 @@ int main(int argc, char** argv)
 {
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
-	glutInitWindowSize/*(1248, 366); */(416,122);
+	glutInitWindowSize(416*2,122*2);
 	glutInitWindowPosition(100, 100);
 	glutCreateWindow("hello");
 	init();
@@ -30,7 +30,7 @@ void display(void)
 	glClear(GL_COLOR_BUFFER_BIT);
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	glColor3f(1.0, 1.0, 1.0);
+	glColor3f(0.6f, 0.196f, 0.8f);
 	
 	geteji(0.0024f,1-0.0655f,0.0985f,1-0.4918f);
 	getxu(0.1442f,1-0.0983f,0.2355f,1-0.418f);
@@ -50,7 +50,7 @@ void display(void)
 void init(void)
 {
 	/* select clearing color 	*/
-	glClearColor(0.0, 0.0, 0.0, 0.0);
+	glClearColor(1.0, 1.0, 1.0, 0.0);
 
 	/* initialize viewing values  */
 	glMatrixMode(GL_PROJECTION);
@@ -87,5 +87,6 @@ void getEnglish(){
 	geti(0.9302f, 1 - 0.795f, 1 - 0.836f, 1 - 0.9426f, 0.0048f, 0.0163f);
 	gett(0.9447f, 1 - 0.836f, 0.9495f, 1 - 0.9262f, 0.0048f, 0.0163f);
 	gety(0.9663f, 1 - 0.836f, 0.9759f, 1 - 0.9426f, 0.0048f, 0.0163f);
+	getlogo(0.8197f,1-0.0081f,0.9831f,1-0.5163f);
 }
 //==============================================================================

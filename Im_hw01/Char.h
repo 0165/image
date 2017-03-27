@@ -11,7 +11,7 @@ void getnh(float, float, float, float, float, float, float);	//left x,y, and mid
 void getl(float, float, float, float);							//left x,y, and down y, and offset x
 void getC(float, float, float, float, float, float);			//left x,y, and top x,y, offset x,y
 void getu(float, float, float, float, float, float, float);		//left x,y, and mid y, button x,y, offset x,y
-void buttonU(float, float, float, float, float, float);			//left x,y, and button x,y, offset x,y
+void buttonU(float, float, float, float, float);				//left x,y, and button x,y, offset x,
 //left x,y, and top x,y, right x,left y, button y, offset x,y
 void getg(float, float, float, float, float, float, float, float, float);
 void getH(float, float, float, float, float, float, float);		//top x,y, and mid y, button y, right x, offset x,y
@@ -21,4 +21,13 @@ void getv(float, float, float, float, float, float);			//top x,y, button x,y, of
 void gete(float, float, float, float, float, float);			//left x,y, and top x,y, offset x,y
 void getr(float, float, float, float, float, float, float);		//left x,y, and mid y, button y ,top x,y, offset x
 void gety(float, float, float, float, float, float);			//top x,y, button x,y, offset x,y
+void getlogo(float, float, float, float);						//left x,y, and top x,y
+
+
+void topo(float, float, float, float);							//left x,y, and top x,y
+void buttono(float, float, float, float);						//left x,y, and top x,y
+void toplefto(float, float, float, float);						//left x,y, and top x,y
+void toprighto(float, float, float, float);						//left x,y, and top x,y
+void buttonlefto(float, float, float, float);					//left x,y, and top x,y
+void buttonrighto(float, float, float, float);					//left x,y, and top x,y
 //==============================================================================
