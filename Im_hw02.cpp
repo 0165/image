@@ -50,7 +50,7 @@ void keyboard(unsigned char key, int x, int y);
 int main(int argc, char** argv)
 {
 	glutInit(&argc, argv);
-	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
+	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH | GLUT_MULTISAMPLE);
 	glutInitWindowSize(416 * 2, 416 * 2);
 	glutInitWindowPosition(100, 100);
 	glutCreateWindow("hello");
@@ -236,11 +236,12 @@ void drawList(void){
 //==============================================================================
 void init(void)
 {
-	GLfloat ambient[] = { 0.3f, 0.3f, 0.3f, 1.0f };
-	GLfloat diffuse[] = { 0.5f, 1.0f, 1.0f, 1.0f };
-	GLfloat position[] = { 6.0f, 1.0f, 1.5f, 0.0f };			//to (0,0,0)
-	GLfloat lmodel_ambient[] = { 0.6f, 0.6f, 0.6f, 1.0f };
-	GLfloat local_view[] = { 0.0f };
+	static GLint buf[1], sbuf[1];
+	static GLfloat ambient[] = { 0.3f, 0.3f, 0.3f, 1.0f };
+	static GLfloat diffuse[] = { 0.5f, 1.0f, 1.0f, 1.0f };
+	static GLfloat position[] = { 6.0f, 1.0f, 1.5f, 0.0f };			//to (0,0,0)
+	static GLfloat lmodel_ambient[] = { 0.6f, 0.6f, 0.6f, 1.0f };
+	static GLfloat local_view[] = { 0.0f };
 
 	glClearColor(0.7f, 1.0f, 0.9f, 0.0f);
 	glEnable(GL_DEPTH_TEST);
@@ -251,9 +252,12 @@ void init(void)
 	glLightfv(GL_LIGHT0, GL_POSITION, position);
 	glLightModelfv(GL_LIGHT_MODEL_AMBIENT, lmodel_ambient);
 	glLightModelfv(GL_LIGHT_MODEL_LOCAL_VIEWER, local_view);
+	glGetIntegerv(GL_SAMPLE_BUFFERS_ARB, buf);
+	glGetIntegerv(GL_SAMPLES_ARB, sbuf);
 
 	glEnable(GL_LIGHTING);
 	glEnable(GL_LIGHT0);
+	glEnable(GL_MULTISAMPLE_ARB);
 	for (int i = 0; i<maxL; i++){
 		list[i].f = false;
 		list[i].x = 0.0f;
