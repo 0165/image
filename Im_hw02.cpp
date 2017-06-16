@@ -8,7 +8,7 @@
 //==============================================================================
 #include "stdafx.h"
 //==============================================================================
-#define maxL 1000   //how many cibe can have
+#define maxL 1000   //how many cube can have
 #define maxC 5      //how many char can show
 //==============================================================================
 struct myCube {
@@ -41,7 +41,7 @@ GLfloat mat_specular[] = { 1.0f, 1.0f, 1.0f, 1.0f };
 //==========================================
 GLfloat ambient[] = { 0.3f, 0.3f, 0.3f, 1.0f };//light
 GLfloat diffuse[] = { 0.5f, 1.0f, 1.0f, 1.0f };
-GLfloat position[] = { 6.0f, 1.0f, 1.5f, 0.0f };			//to (0,0,0)
+GLfloat position[] = { 6.0f, 1.0f, 1.5f, 0.0f };
 GLfloat lmodel_ambient[] = { 0.6f, 0.6f, 0.6f, 1.0f };
 GLfloat local_view[] = { 0.0f };
 //==========================================
@@ -279,10 +279,21 @@ void valueInit(void){
 }
 //==============================================================================
 void endGame(void){
-	char * over = "game over";
+	char * over = "game over__";
 	glPushMatrix();
-	for (int i = 0; i < 9; i++)
+	glLoadIdentity();
+	count--;
+	gluLookAt(-5.0, view_y, 5.0, 0.0, view_y - 3.0f, 0.0, 0.0, 1.0, 0.0);
+	glDisable(GL_LIGHTING);
+	glColor3f(0.4f, 0.0f, 0.9f);
+	glRasterPos3f(-0.3f, view_y, 0.0f);
+	for (int i = 0; i <11; i++)
 		glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, *(over + i));
+	IntToChar();
+	int n = (int)strlen(str);
+	for (int i = 0; i < n; i++)
+		glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, *(str + i));
+	glEnable(GL_LIGHTING);
 	glPopMatrix();
 }
 //==============================================================================
@@ -309,19 +320,19 @@ bool checkStay(int i, int j){
 	switch (state){
 		case 7:
 			if (list[i].mid_z - list[i].z / 2.0f < list[j].mid_z + list[j].z / 2.0f){
-				list[i].angle -= 2.0f;		list[i].fulc_x = list[j].mid_x - list[j].x / 2.0f - list[i].mid_x;
+				list[i].angle -= 4.0f;		list[i].fulc_x = list[j].mid_x - list[j].x / 2.0f - list[i].mid_x;
 			}return true;
 		case 11:
 			if (list[i].mid_z + list[i].z / 2.0f < list[j].mid_z - list[j].z / 2.0f){
-				list[i].angle += 2.0f;		list[i].fulc_x = list[j].mid_z - list[j].z / 2.0f - list[i].mid_z;
+				list[i].angle += 4.0f;		list[i].fulc_x = list[j].mid_z - list[j].z / 2.0f - list[i].mid_z;
 			}return true;
 		case 13:
 			if (list[i].mid_x - list[i].x / 2.0f < list[j].mid_x + list[j].x / 2.0f){
-				list[i].angle -= 2.0f;		list[i].fulc_z = list[j].mid_x - list[j].x / 2.0f - list[i].mid_x;
+				list[i].angle -= 4.0f;		list[i].fulc_z = list[j].mid_x - list[j].x / 2.0f - list[i].mid_x;
 			}return true;
 		case 14:
 			if (list[i].mid_x + list[i].x / 2.0f < list[j].mid_x - list[j].x / 2.0f){
-				list[i].angle += 2.0f;		list[i].fulc_z = list[j].mid_x - list[j].x / 2.0f - list[i].mid_x;
+				list[i].angle += 4.0f;		list[i].fulc_z = list[j].mid_x - list[j].x / 2.0f - list[i].mid_x;
 			}return true;
 		case 15:		list[i].f = false;		list[i].h = list[j].h + 1.0f;	return true;
 		default:		return false;
